@@ -35,6 +35,7 @@ public class User {
 
     @NotEmpty(message = "Role is required")
     @Pattern(regexp = "^(user|admin)$", message = "Role must be user or admin")
+    @Column(columnDefinition = "ENUM('user', 'admin') CHECK (role IN ('user', 'admin'))")
     private String role;
 
     @NotNull(message = "Age is required")

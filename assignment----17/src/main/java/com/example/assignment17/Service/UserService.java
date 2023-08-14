@@ -5,7 +5,6 @@ import com.example.assignment17.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.StyledEditorKit;
 import java.util.List;
 
 @Service
@@ -13,7 +12,6 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository userRepository;
-    private User user1;
 
     public List<User> getAllUser(){
         return userRepository.findAll();
